@@ -7,6 +7,8 @@
 <script>
   import Scrollbar from 'smooth-scrollbar';
   import { onMount } from 'svelte';
+  import NProgress from 'nprogress';
+  import 'nprogress/nprogress.css';
   import { navigating } from '$app/stores';
   console.log(navigating)
   
@@ -15,6 +17,10 @@
   })
   
 </script>
+
+<svelte:window
+  on:sveltekit:navigation-start={() => NProgress.start()}
+  on:sveltekit:navigation-end={() => NProgress.done()} />
 
 <nav class="uk-navbar-container" uk-navbar>
   <div class="uk-navbar-left">
