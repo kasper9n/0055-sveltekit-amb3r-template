@@ -20,7 +20,7 @@ Start app in dev mode
 npm run dev
 ```
 
-Build the app. **Before you build for production, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment**
+Build the app. **Before you build for production, make sure to use the appropriate [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Currently, `@sveltejs/adapter-static` is used**
 ```
 npm run build
 ```
