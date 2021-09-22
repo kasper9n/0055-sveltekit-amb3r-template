@@ -1,7 +1,10 @@
 <script context="module">
-  import '../global.scss'
-  import _uk from 'uikit/dist/js/uikit.min.js'
-  import _Icons from 'uikit/dist/js/uikit-icons.min.js'
+  import '../global.scss';
+  import _uk from 'uikit/dist/js/uikit.min.js';
+  import _Icons from 'uikit/dist/js/uikit-icons.min.js';
+  import Scrollbar from 'smooth-scrollbar';
+  
+  Scrollbar.init(document.querySelector('html'));
 </script>
 
 <nav class="uk-navbar-container" uk-navbar>
