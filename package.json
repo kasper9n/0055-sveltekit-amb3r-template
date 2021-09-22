@@ -9,7 +9,9 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "^1.0.0-next.171",
+    "sass": "^1.42.1",
     "svelte": "^3.42.6",
-    "svelte-preprocess": "^4.9.5"
+    "svelte-preprocess": "^4.9.5",
+    "uikit": "^3.7.3"
   }
 }
