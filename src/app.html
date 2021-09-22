@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
 	</head>
-	<body>
+	<!-- smooth-scroll.js cannot be applied to <html> because it results in an
+		error when SvelteKit navigates -->
+	<body data-scrollbar>
 		<div id="svelte">%svelte.body%</div>
 	</body>
 </html>

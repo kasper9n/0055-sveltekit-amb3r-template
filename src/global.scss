@@ -14,3 +14,9 @@ $global-link-color: #c702d9;
 .red {
   color: red;
 }
+
+// Make <body> the element that scrolls. Workaround for smooth-scroll.js
+// error when navigating pages
+html, body {
+  height: 100%;
+}

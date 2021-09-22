@@ -1,31 +1,40 @@
 <script context="module">
   import '../global.scss';
-  import _uk from 'uikit/dist/js/uikit.min.js';
-  import _Icons from 'uikit/dist/js/uikit-icons.min.js';
+  import 'uikit/dist/js/uikit.min.js';
+  import 'uikit/dist/js/uikit-icons.min.js';
+</script>
+
+<script>
   import Scrollbar from 'smooth-scrollbar';
+  import { onMount } from 'svelte';
+  import { navigating } from '$app/stores';
+  console.log(navigating)
   
-  Scrollbar.init(document.querySelector('html'));
+  onMount(() => {
+    Scrollbar.initAll();
+  })
+  
 </script>
 
 <nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
+  <div class="uk-navbar-left">
 
-        <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#example">UIKit navbar exmaple</a></li>
-            <li>
-                <a href="#example">Parent</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#example">Active</a></li>
-                        <li><a href="#example">Item</a></li>
-                        <li><a href="#example">Item</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#example">Item</a></li>
-        </ul>
+      <ul class="uk-navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/page2">Page 2</a></li>
+        <li>
+          <a href="/">Dropdown</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li><a href="/">Active</a></li>
+              <li><a href="/">Item</a></li>
+              <li><a href="/">Item</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
 
-    </div>
+  </div>
 </nav>
 
 <slot />
